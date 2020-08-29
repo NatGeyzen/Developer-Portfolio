@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/dashboard.css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="all-collections">
+            <section class="collection-container" id="projects-container">
+                <h2 class="collection-type" id="projects">Projects</h2>
+                <div class="collection" id="projects-collection">
+                    <button id="add-project" class="material-icons create">add_circle</button>
+                    <form action="/new-project" method="post"  id="new-project">
+                        <input type="text" name="name" id="name" placeholder="project name">
+                        <input type="url" name="url" id="url" placeholder="project url">
+                        <input type="text" name="path" id="path" placeholder="screenshot relative path">
+                        <input type="text" name="technologies" id="technologies" placeholder="technologies used">
+                        <input type="text" name="description" id="description" placeholder="project description" id="des-input">
+                        <input type="submit" name="addProject"value="add project" id="project-submit">
+                    </form>
+                </div>
+                
+                
+            </section>
+            <section class="collection-container" id="blog-container">
+                <h2 class="collection-type" id="blog">Blog posts</h2>
+                <div class="collection" id="blog-collection">
+                    <button id="add-blog-post" class="material-icons create">add_circle</button>    
+                    <form action="/new-blog-post" method="post" id="new-blog-post">
+                        <input type="text" name="title" id="title" placeholder="post title">
+                        <input type="text" name="subtitle" id="subtitle" placeholder="post sub title">
+                        <input type="text" name="series" id="series" placeholder="series title">
+                        <input type="text" name="post-tags" id="post-tags" placeholder="tags">
+                        <textarea id="content" name="content">post content</textarea>
+                        <input type="submit" name="addPost"value="add project" id="post-submit">
+                    </form>
+                </div>
+            </section>
+        </div>
+        
+    </div>
+</body>
+</html>

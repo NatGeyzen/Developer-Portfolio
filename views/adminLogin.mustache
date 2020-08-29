@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Admin Login">
+        <link type="text/css" rel="stylesheet" href="/css/login.css">
+        <title>Admin Login</title>
+    </head>
+
+    <body>
+        <div class="login_screen">
+            <form action="/admin/login" method="post" class="admin_login_form">
+                <span class="form_description">Sign in to access the admin dashboard.</span>
+                <div class="input_container">
+                        <div class="input_wrapper">
+                            <input  type="text" name="username" placeholder="username" class="login_input" auto-focus />
+                        </div>
+                        <div class="input_wrapper">
+                            <input type="password" name="password"  placeholder="password" class="login_input" />
+                        </div>    
+                        
+                </div>
+                <button type="submit" value="submit" class="login_button">Sign In</button>
+            </form>
+            <span class="login_acknowledgements">Background image by Ash Edmonds on Unsplash</span>
+        </div>
+    </body>
+</html>

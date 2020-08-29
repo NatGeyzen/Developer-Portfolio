@@ -1,0 +1,185 @@
+:root {
+    --main-bg-color: #121212;
+}
+
+.hero {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--main-bg-color);
+    overflow: hidden;
+}
+
+#jsx, #css, #node           { position: absolute; 
+    /* opacity: 0; animation: fadeInElement 300ms ease-out 700ms forwards;  */
+}
+#jsx                        { top: 5%; left: 7.5%;  } 
+#css                        { top: 15%; left: 67.5%;  } 
+#node                       { top: 75%; left: 80%;  } 
+
+h1 {
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Megrim', cursive;
+    font-size: 6em;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 7.5%;
+    left: 50%;
+    width: 40vw;
+    margin-left: -20vw;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9), 2px 2px 1px rgba(255, 255, 255, 0.9), 3px 3px 1px rgba(71, 4, 255, 0.9), 4px 4px 1px rgba(71, 4, 255, 0.9);
+}
+
+#start, #end {
+    display: block;
+    position: absolute;
+    /* opacity: 0; */
+}
+
+#start {
+    left: 0;
+    /* animation: slideStartSpanFromLeft 600ms ease-out 300ms forwards; */
+}
+
+#end {
+    margin-top: 17.5%;
+    right: 0;
+    /* animation: slideEndSpanFromRight 600ms ease-out 300ms forwards; */
+}
+
+.carrousel-container {
+    width: 50vw;
+    margin: auto;
+    transform: translate(0, 45%);
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Righteous', cursive;
+    font-size: 3.25em;
+    font-variant: small-caps;
+}
+
+.carrousel-sentence {
+    margin-top: 8.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#passion, #dabbles {
+    position: absolute; 
+    left: 0;
+    padding: 0;
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+}
+
+#back-end {
+    opacity: 0;
+}
+
+#passion            { 
+    -webkit-animation: fadeSentence1InAndOut 15500ms ease-out infinite forwards; 
+            animation: fadeSentence1InAndOut 15500ms ease-out infinite forwards; 
+}
+
+
+
+.carrousel-word {
+    display: block;
+    position: absolute;
+    top: 1.5em;
+    opacity: 0;
+}
+
+#writing            { -webkit-animation: fadeInAndOut 15000ms ease-out 500ms infinite forwards; animation: fadeInAndOut 15000ms ease-out 500ms infinite forwards; }
+#teaching           { -webkit-animation: fadeInAndOut 15000ms ease-out 3500ms infinite forwards; animation: fadeInAndOut 15000ms ease-out 3500ms infinite forwards; }
+#effects            { -webkit-animation: fadeInAndOut 15000ms ease-out 6500ms infinite forwards; animation: fadeInAndOut 15000ms ease-out 6500ms infinite forwards; }
+#minimalism         { -webkit-animation: fadeInAndOut 15000ms ease-out 9500ms infinite forwards; animation: fadeInAndOut 15000ms ease-out 9500ms infinite forwards; }
+
+#dabbles            { 
+    -webkit-animation: fadeInAndOut 15500ms ease-out 12500ms infinite forwards; 
+            animation: fadeInAndOut 15500ms ease-out 12500ms infinite forwards; 
+}
+
+#back-end           { -webkit-animation: fadeInAndOut 15000ms ease-out 13200ms infinite forwards; animation: fadeInAndOut 15000ms ease-out 13200ms infinite forwards; }
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------ 
+    ANIMATIONS
+------------------------------------------------------------------------------------------ */
+
+
+
+@-webkit-keyframes slideStartSpanFromLeft {
+    0%      { left: -100%; }
+    100%    { left: 5%; opacity: 1; }
+}
+
+@keyframes slideStartSpanFromLeft {
+    0%      { left: -100%; }
+    100%    { left: 5%; opacity: 1; }
+}
+
+@-webkit-keyframes slideEndSpanFromRight {
+    0%      { left: 100%; }
+    100%    { left: 20%; opacity: 1; }
+}
+
+@keyframes slideEndSpanFromRight {
+    0%      { left: 100%; }
+    100%    { left: 20%; opacity: 1; }
+}
+
+@-webkit-keyframes fadeInElement {
+    100%    { opacity: 1; }
+}
+
+@keyframes fadeInElement {
+    100%    { opacity: 1; }
+}
+
+@-webkit-keyframes fadeSentence1InAndOut {
+    1.85%   { opacity: 1; }
+    77%     { opacity: 1; }
+    80%     { opacity: 0; }
+}
+
+@keyframes fadeSentence1InAndOut {
+    1.85%   { opacity: 1; }
+    77%     { opacity: 1; }
+    80%     { opacity: 0; }
+};
+
+@keyframes randomTestName {
+    1.75%   { opacity: 1; }
+    17.5%   { opacity: 1; }
+    20%     { opacity: 0; }
+}
+
+@-webkit-keyframes fadeInAndOut {
+    2.15%   { opacity: 1; }
+    15%     { opacity: 1; }
+    17.5%   { opacity: 0; }
+    /* 0% { opacity: 0; }
+    5% { opacity: 1; }
+    92.5% { opacity: 1; }
+    100% { opacity: 0;} */
+}
+
+@keyframes fadeInAndOut {
+    2.15%   { opacity: 1; }
+    15%     { opacity: 1; }
+    17.5%   { opacity: 0; }
+    /* 0% { opacity: 0; }
+    5% { opacity: 1; }
+    92.5% { opacity: 1; }
+    100% { opacity: 0;} */
+}

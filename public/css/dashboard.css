@@ -1,0 +1,227 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Alata', sans-serif;
+}
+
+form {
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12%;
+}
+
+input {
+    background-color: transparent;
+    display: block;
+    margin: 0.8em 0;
+    width: 80%;
+    font-size: 1em;
+    padding-bottom: 3px;
+    border-right: none;
+    border-bottom: 1px solid rgba(33, 152, 151, 0.6);
+    font-family: 'Alata', sans-serif;
+    color: rgba(255, 255, 255, 0.75);
+    outline: none;
+}
+
+#new-project > input {
+    border-bottom: 1px solid rgba(33, 152, 151, 0.6);
+}
+
+#new-blog-post > input {
+    border-bottom: 1px solid rgba(112, 69, 175, 0.6);
+}
+
+#content {
+    background-color: transparent;
+    width: 80%;
+    height: 90px;
+    border-top: none;
+    border-right: none;
+    border-left: 1px solid rgba(112, 69, 175, 0.5);
+    border-bottom: 1px solid rgba(112, 69, 175, 0.6);
+    margin-top: 1em;
+    color: rgba(199, 198, 198, 0.75);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#project-submit, #post-submit{
+    border: 2px solid rgba(33, 152, 151, 0.9);
+    width: 150px;
+    border-radius: 10px;
+    font-variant: small-caps;
+    font-size: 125%;
+    font-weight: bolder;
+    padding-top: 0;
+    padding-bottom: 5px;
+    position: absolute;
+    bottom: 8%;
+    color:  rgb(33, 152, 151);
+    cursor: pointer;
+}
+
+#project-submit {
+    border: 2px solid rgba(33, 152, 151, 0.9);
+    color:  rgb(33, 152, 151);
+}
+
+#post-submit {
+    border: 2px solid rgba(112, 69, 175, 0.9);
+    color:  rgb(112, 69, 175);
+}
+
+.dashboard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #121212;   
+}
+
+.all-collections {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 85vw;
+    height: 90vh;
+    margin-left: 7.5vw;
+}
+
+.collection-container {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.collection-type {
+    color: rgba(255, 255, 255, 0.75);
+    
+    letter-spacing: 0.75px;
+    margin-bottom: 2em;
+}
+
+#projects, #blog {
+    padding-bottom: 3px;
+}
+
+#projects {
+    border-bottom: 2px solid #219897;
+}
+
+#blog {
+    border-bottom: 2px solid #7045af;    
+}
+
+.collection:after {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 85px;
+    transform: rotate(45deg);
+    content: '';
+    background-color: rgb(32, 32, 32);
+    border-right: none;
+    border-bottom: none;
+}
+
+#projects-collection:after {
+    left: 23.25%;
+    border-top: 2px solid rgba(33, 152, 151, 0.6);
+    border-left: 2px solid rgba(33, 152, 151, 0.6);
+}
+
+#blog-collection:after {
+    left: 73.25%;
+    border-top: 2px solid rgba(112, 69, 175, 0.6); 
+    border-left: 2px solid rgba(112, 69, 175, 0.6); 
+}
+
+.collection {
+    height: 80%;
+    width: 35vw;
+    background-color: rgb(32, 32, 32); 
+    border-radius: 10px;
+}
+
+#projects-collection {
+    border: 2px solid rgba(33, 152, 151, 0.4); 
+}
+
+
+#blog-collection {
+    border: 2px solid rgba(112, 69, 175, 0.4); 
+} 
+
+button {
+    background-color: transparent;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.create {
+    font-size: 2.5em;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 17.5%;
+    display: none;
+}
+
+#add-project {
+    color: #0aadab; 
+    left: 42%;
+}
+
+#add-blog-post {
+    color: #853fec; 
+    left: 92%;
+}
+
+/* .top-bar {
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    color: #c6ddf5;
+}
+
+h1 {
+    font-variant: small-caps;
+    font-size: 1.3em;
+    font-family: 'Alata', sans-serif;
+    letter-spacing: 1px;
+    margin-left: 1%;
+}
+
+.actions {
+    background-image: linear-gradient(to bottom right, #03828b, #049b9b , #027ba0); 
+    border-radius: 5px;
+    position: absolute;
+    left: 1%;
+    top: 7.5vh;
+    width: 5vw;
+    height: 90vh;
+
+}
+
+.dashboard-list {
+    width: 60%;
+    height: 200px;
+    margin: auto;
+    background-color: #424242; 
+    border-radius: 10px;
+    /* box-shadow: 2px 2px 4px #757575;   
+} */
