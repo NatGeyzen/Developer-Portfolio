@@ -1,0 +1,110 @@
+.skills {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    background-color: #121212;
+}
+
+.section-title {
+    font-family: 'Righteous', cursive;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 400%;
+    position: absolute;
+    left: 7.5vw;
+    letter-spacing: 2px;
+    font-variant: small-caps;
+}
+
+.legend {
+    box-sizing: border-box;
+    width: 95vw;
+    height: 10vh;
+    position: absolute;
+    bottom: 5vh;
+    left: 5vw;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Righteous', cursive;
+    color: rgba(255, 255, 255, 0.65); 
+}
+
+.flex-column-cell {
+    width: 17.5%;
+    box-sizing: border-box;
+    text-align: left;
+    margin-left: 1.5em;
+}
+
+
+.flex-row {
+    display: flex;
+    align-items: center;
+}
+.legend-label {
+    padding: 0.3em 0.5em;
+    font-variant: small-caps;
+    font-size: 95%;
+}
+
+
+.legend-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.65); 
+}
+
+#terminal-symbol            { border: 3px solid #806894; }
+#version-control-symbol     { border: 3px solid #0599be; }
+#front-end-trifecta-symbol  { border: 3px solid #018b79; }
+#libraries-symbol           { border: 3px solid #963203; }
+#databases-symbol           { border: 3px solid #680142; }
+#run-time-env-symbol        { border: 3px solid #0351b6; }
+#framework-symbol           { border: 3px solid #550077; }
+#template-engine-symbol     { border: 3px solid #608802; }
+
+.legend-line {
+    width: 10px;
+    height: 2px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.65);
+    margin: 0 0.25em;
+}
+
+.connector-line {
+    height: 2px; 
+    width: 125px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.35); 
+    z-index: 1;
+    position: absolute;
+}
+
+#html_to_css            { left: 32.5%; top: 35%; transform: rotate(-47.5deg); }
+#css_to_js              { left: 35%; top: 41%; }
+#js_to_html             { left: 37.75%; top: 35%; transform: rotate(47.5deg); }
+#js_to_react            { left: 41.75%; top: 45%; transform: rotate(47.5deg); }
+#js_to_jquery           { left: 39%; top: 45%; transform: rotate(-47.5deg); }
+#js_to_firebase         { left: 38.8%; top: 50%; transform: rotate(90deg); width: 175px; }
+#js_to_node             { left: 45%; top: 41%; }
+#node_to_mongo          { left: 51.75%; top: 45%; transform: rotate(47.5deg); }
+#node_to_mustache       { left: 53.75%; top: 32.5%; transform: rotate(-47.5deg); }
+#mustache_to_express    { left: 57.75%; top: 35%; transform: rotate(47.5deg); }
+#express_to_mongo       { left: 59%; top: 45%; transform: rotate(-47.5deg); }
+#node_to_express        { left: 55%; top: 41%; }
+#mustache_to_mongo      { left: 53.75%; top: 40%; transform: rotate(90deg); width: 175px; }
+#react_to_firebase      { left: 42.75%; top: 60%; transform: rotate(-47.5deg); }
+
+#linux_to_git           { left: 9.75%; top: 42.5%; transform: rotate(-50deg); }
+#git_to_powershell      { left: 14%; top: 40%; transform: rotate(50deg); }
+#powershell_to_github   { left: 16.5%; top: 54.5%; transform: rotate(-50deg);  }
+#github_to_linux        { left: 8.75%; top: 54.5%; transform: rotate(50deg); }
+#git_to_github          { left: 11.25%; top: 46%; transform: rotate(90deg); width: 175px; }
+
+/* <div id="linux_to_git" className="connector-line"></div>
+            <div id="git_to_powershell" className="connector-line"></div>
+            <div id="powershell_to_github" className="connector-line"></div>
+            <div id="github_to_linux" className="connector-line"></div>
+            <div id="git_to_github" className="connector-line"></div> */

@@ -1,0 +1,154 @@
+:root {
+    --teal: #018b79;
+    --red: #963203;
+    --lighter-red: rgba(199, 0, 57, 0.7); 
+    --light-blue: #0351b6;
+    --light-purple: #608802;
+    --new-color: #0599be; 
+    --locked:  #806894; 
+    --other: rgb(187, 167, 167);
+}
+
+.skill-container {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: translate(-50%, 40%);
+    z-index: 5;
+}
+
+.skill {
+    height: 75px;
+    width: 75px;
+    background-color: #121212;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Righteous', cursive;
+    font-variant: small-caps;
+    font-size: 110%;
+    padding: 3px;
+    box-sizing: border-box;
+    z-index: 5;
+}
+
+.languages.skill            { border: 3px solid var(--teal); color: var(--teal); }
+.libraries.skill            { border: 3px solid var(--red); color: var(--red); }
+.libraries-locked.skill     { border: 3px solid var(--lighter-red); color: var(--lighter-red); }
+.run-time-env.skill         { border: 3px solid var(--light-blue); color: var(--light-blue); }
+.view-engine.skill              { border: 3px solid var(--light-purple); color: var(--light-purple); }
+.terminal.skill             { border: 3px solid var(--locked); color: var(--locked); font-size: 90%; }
+.version-control.skill      { border: 3px solid var(--new-color); color: var(--new-color); }
+.framework.skill            { border: 3px solid rgb(85, 0, 119); color: rgb(138, 2, 192); }
+.database.skill             { border: 3px solid #ac016d; color: #d30f8b}
+.other.skill                { border: 3px solid var(--other); color: var(--other); }
+
+.level-container {  
+    background-color: #121212; 
+    color: #DAA520; 
+    border: 2px solid #DAA520;
+    font-weight: bold;
+    font-size: 90%;
+    height: 21px;
+    width: 21px;
+    border-radius: 50%;
+    position: relative;
+    left: -10%;
+    top: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+#html-container                     { top: 10%; left: 40%; z-index: 99;}
+#css-container                      { top: 22.5%; left: 35%; }
+#js-container                       { top: 22.5%; left: 45%; }
+#node-container                     { top: 22.5%; left: 55%; }
+#jquery-container                   { top: 35%; left: 40%; }
+#react-container                    { top: 35%; left: 50%; }
+#firebase-container                 { top: 47.5%; left: 45%; font-size: 90%; }
+#linux-terminal-container               { top: 50%; transform: translateY(-50%); left: 27.5%; }
+#powershell-container                   { top: 50%; transform: translateY(-50%); left: 67.5%; }
+#git-container                          { top: 17.5%; left: 65%; }
+#github-container                       { top: 45%; left: 65%; }
+
+#chrome-dev-tools-container             { top: 17.5%; left: 40%; font-size: 75%; }
+#chrome-dev-tools-container > .skill    { padding: 10px; }
+#testing-container                      { top: 50%; transform: translateY(-50%); left: 2.5%; font-size: 80%; }
+#debugging-container                    { top: 50%; transform: translateY(-50%); left: 42.5%; font-size: 80%; }
+#ux-container                           { top: 45%; left: 40%; font-size: 90%; }
+
+#express-container                      { top: 22.5%; left: 65%; font-size: 95%; }
+#mongodb-container                      { top: 35%; left: 60%; font-size: 80%; }
+#mustache-container                     { top: 10%; left: 60%; font-size: 90%; }
+
+.terminal-skills, .other-skills {
+    width: 425px;
+    height: 100vh;
+    position: absolute;
+    bottom: 0;  
+}
+
+.terminal-skills        { left: 0; }
+.other-skills           { right: 0; }
+
+.level-bar-container { 
+    position: absolute; 
+    top: 0; 
+    right: 0;
+    width: 25vw; 
+    height: 20vh; 
+    display: flex;
+    align-items: center;
+}
+
+.level {
+    height: 35px;
+    width: 300px;
+    /* padding: 10px;  */
+    border-radius: 30px;
+    margin-top: 3.75em;
+    margin-left: 0.5em;
+    background-color: #121212; 
+    color: rgb(155, 205, 255, 0.9);
+    border: 3px solid rgb(155, 205, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Righteous', cursive;
+    font-size: 80%; 
+    /* z-index: 1; */
+    /* box-sizing: border-box; */
+}
+
+.progress-bar {
+    border: 3px solid rgb(155, 205, 255, 0.8); 
+    background-color: rgba(48, 39, 39, 0.9);
+    width: 90vw;
+    height: 25px;
+    border-radius: 30px;
+    margin-top: 3em;
+    margin-left: 1.5em; 
+}
+
+.progress {
+    width: 77%;
+    height: 100%;
+    background-color: rgb(155, 205, 255, 0.3); 
+    border-radius: 30px;
+}
+
+.boost { 
+    width: 90vw;
+    color: rgb(155, 205, 255, 0.9);
+    position: relative; 
+    top: 52.5px; 
+    left: -200px; 
+    font-size: 80%; 
+    font-family: 'Righteous', cursive; 
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Hero.css';
 
-import Code from '../code/code';
+import Code from '../Code/Code';
 
 
 const code_sample_1 = `
