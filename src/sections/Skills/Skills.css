@@ -1,59 +1,127 @@
-.skills {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+/* ------------------------------------------------------------------
+   LEVEL/PROGRESS BAR
+   ------------------------------------------------------------------ */
+
+.level-bar-container { 
+    position: absolute; 
+    top: 0; 
+    right: 0;
+    width: 50%; 
+    height: 100vh; 
+    display: flex;
+    align-items: center;
     box-sizing: border-box;
-    margin: 0;
-    background-color: #121212;
 }
 
-.section-title {
-    font-family: 'Righteous', cursive;
-    color: rgba(255, 255, 255, 0.95);
-    font-size: 400%;
+.level {
     position: absolute;
-    left: 7.5vw;
-    letter-spacing: 2px;
-    font-variant: small-caps;
+    right: 18px;
+    height: 27px;
+    width: 27px;
+    /* padding: 10px;  */
+    border-radius: 30px;
+    top: 12vh; 
+    margin-left: 0.5em;
+    background-color: #121212; 
+    color: rgb(155, 205, 255, 0.9);
+    border: 2px solid rgb(155, 205, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Righteous', cursive;
+    font-size: 80%;  
+    /* z-index: 1; */
+    /* box-sizing: border-box; */
 }
+
+.progress-bar {
+    position: absolute;
+    right: 55px;
+    top: 12.5vh; 
+    border: 2px solid rgb(155, 205, 255, 0.8); 
+    background-color: rgba(48, 39, 39, 0.9);
+    width: 80px;
+    height: 20px;
+    border-radius: 30px;
+}
+
+.progress {
+    width: 77%;
+    height: 100%;
+    background-color: rgb(155, 205, 255, 0.3); 
+    border-radius: 30px;
+}
+
+.boost { 
+    color: rgb(155, 205, 255, 0.9);
+    font-size: 70%; 
+    font-family: 'Righteous', cursive; 
+    text-align: left;
+    position: absolute;
+    top: 110px;
+    right: 25px; 
+}
+
+.boost > span {
+    display: block; 
+}
+
+.boost > span:first-child {
+    font-weight: bold;     
+}
+.boost > span:last-child {
+    margin-left: 10px;
+}
+
+
+/* ------------------------------------------------------------------
+   LEGEND
+   ------------------------------------------------------------------ */
 
 .legend {
     box-sizing: border-box;
-    width: 95vw;
-    height: 10vh;
+    width: 100vw;
+    /* height: 125px; */
     position: absolute;
-    bottom: 5vh;
-    left: 5vw;
+    bottom: 15px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     font-family: 'Righteous', cursive;
     color: rgba(255, 255, 255, 0.65); 
+    
 }
 
 .flex-column-cell {
-    width: 17.5%;
+    width: 42%;
     box-sizing: border-box;
     text-align: left;
-    margin-left: 1.5em;
 }
 
+.flex-column-cell:first-child {
+    margin-left: 20px; 
+}
+
+.flex-column-cell.one-column {
+    width: 50%;
+    font-size: 100%; 
+    margin-left: 40px; 
+    margin-bottom: 5px; 
+}
 
 .flex-row {
     display: flex;
     align-items: center;
+    padding: 2px 0;
 }
 .legend-label {
-    padding: 0.3em 0.5em;
+    padding: 0.15em 0.5em;
     font-variant: small-caps;
-    font-size: 95%;
+    font-size: 80%;
 }
 
-
 .legend-circle {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     border: 3px solid rgba(255, 255, 255, 0.65); 
 }
@@ -74,37 +142,132 @@
     margin: 0 0.25em;
 }
 
-.connector-line {
-    height: 2px; 
-    width: 125px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.35); 
-    z-index: 1;
-    position: absolute;
+
+/* -----------------------------------------------------------------------------------------
+   MEDIA QUERIES
+   ----------------------------------------------------------------------------------------- */
+
+@media (max-width: 320px) {
+    .boost {
+        top: 97.5px; 
+        right: 20px; 
+    }
+}
+@media (min-width: 400px) {
+    .boost {
+        top: 120px;
+    }
+    .flex-column-cell {
+        width: 40%;
+    }  
+    .flex-column-cell:first-child {
+        margin-left: 40px; 
+    } 
+    .legend-label {
+        font-size: 85%;
+    }
 }
 
-#html_to_css            { left: 32.5%; top: 35%; transform: rotate(-47.5deg); }
-#css_to_js              { left: 35%; top: 41%; }
-#js_to_html             { left: 37.75%; top: 35%; transform: rotate(47.5deg); }
-#js_to_react            { left: 41.75%; top: 45%; transform: rotate(47.5deg); }
-#js_to_jquery           { left: 39%; top: 45%; transform: rotate(-47.5deg); }
-#js_to_firebase         { left: 38.8%; top: 50%; transform: rotate(90deg); width: 175px; }
-#js_to_node             { left: 45%; top: 41%; }
-#node_to_mongo          { left: 51.75%; top: 45%; transform: rotate(47.5deg); }
-#node_to_mustache       { left: 53.75%; top: 32.5%; transform: rotate(-47.5deg); }
-#mustache_to_express    { left: 57.75%; top: 35%; transform: rotate(47.5deg); }
-#express_to_mongo       { left: 59%; top: 45%; transform: rotate(-47.5deg); }
-#node_to_express        { left: 55%; top: 41%; }
-#mustache_to_mongo      { left: 53.75%; top: 40%; transform: rotate(90deg); width: 175px; }
-#react_to_firebase      { left: 42.75%; top: 60%; transform: rotate(-47.5deg); }
+@media (max-width: 400px) and (max-height: 850px) {
+    .boost {
+        top: 130px;
+    }    
+}
 
-#linux_to_git           { left: 9.75%; top: 42.5%; transform: rotate(-50deg); }
-#git_to_powershell      { left: 14%; top: 40%; transform: rotate(50deg); }
-#powershell_to_github   { left: 16.5%; top: 54.5%; transform: rotate(-50deg);  }
-#github_to_linux        { left: 8.75%; top: 54.5%; transform: rotate(50deg); }
-#git_to_github          { left: 11.25%; top: 46%; transform: rotate(90deg); width: 175px; }
+@media (min-width: 400px) and (max-height: 850px) {
+    .boost {
+        top: 130px;
+    }    
+}
 
-/* <div id="linux_to_git" className="connector-line"></div>
-            <div id="git_to_powershell" className="connector-line"></div>
-            <div id="powershell_to_github" className="connector-line"></div>
-            <div id="github_to_linux" className="connector-line"></div>
-            <div id="git_to_github" className="connector-line"></div> */
+@media (min-width: 768px) {
+    .arrow.right, .arrow.left { 
+        display: none; 
+    }
+}
+
+@media (min-width: 768px) and (min-height: 1000px) {
+    .level-bar-container { 
+        width: 50%; 
+        height: 20vh;
+        transform: translateX(-7.5%);
+    }
+    .level {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%; 
+        font-size: 130%; 
+        top: 11vh;
+    }
+    .progress-bar {
+        width: 200px;
+        height: 35px; 
+        top: 11.75vh; 
+        right: 85px; 
+    }
+    .boost { 
+        font-size: 105%; 
+        right: 90px; 
+        margin-top: 50px; 
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 1000px) {
+    .level-bar-container { 
+        width: 50%; 
+        height: 20vh;
+        transform: translateX(-7.5%);
+    }
+    .level {
+        height: 65px;
+        width: 65px;
+        font-size: 170%; 
+        top: 11vh;
+    }
+    .progress-bar {
+        width: 250px;
+        height: 45px; 
+        right: 100px; 
+    }
+    .boost { 
+        font-size: 135%; 
+        right: 100px; 
+        top: 175px; 
+    }
+}
+
+@media (min-width: 768px) and (max-height: 577px) {
+    .level-bar-container { 
+        width: 50%; 
+        height: 20vh;
+        transform: translateX(-7.5%);
+    }
+    .level {
+        height: 35px;
+        width: 35px;
+        font-size: 90%; 
+        top: 13vh;
+    }
+    .progress-bar {
+        width: 125px;
+        height: 25px; 
+        right: 65px; 
+        top: 14vh;
+    }
+    .boost { 
+        font-size: 70%; 
+        right: 65px; 
+        top: 115px; 
+        /* margin-top: 12.5px;  */
+    }
+}
+
+@media (min-width: 1000px) and (max-height: 577px) {
+    .progress-bar {
+        width: 175px;
+    }
+    .boost { 
+        font-size: 70%; 
+        right: 100px;  
+    }
+}

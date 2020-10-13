@@ -1,0 +1,239 @@
+.project-container {
+    width: 50vw;
+    height: 35vh;
+}
+
+.project-container.completed_1, .project-container.completed_2, .project-container.completed_3, .project-container.in-progress_1, .project-container.planned_1 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+}
+
+.project-container.completed_1, .project-container.completed_2, .project-container.completed_3 {
+    z-index: 999;
+}
+.project-container.in-progress_1, .project-container.planned_1 {
+    z-index: 888;
+}
+
+.project-container.completed_1, .project-container.completed_2 {
+    margin-top: -140px;
+}
+
+.project-container.in-progress_1, .project-container.planned_1 {
+    margin-top: 140px;
+}
+
+.project-container.completed_1, .project-container.in-progress_1 {
+    margin-left: -82.5px;
+}
+
+.project-container.completed_2, .project-container.planned_1 {
+    margin-left: 82.5px;
+}
+
+
+
+.hexagon {
+    width: 152px;
+    height: 85px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hexagon:before {
+    content: '';
+    width: 148.5px;
+    height: 90.5px;
+    position: absolute;
+    left: 0;
+    margin-top: -3px;
+    transform: rotate(59deg);
+}
+
+.hexagon:after {
+    content: '';
+    width: 148.5px;
+    height: 90.5px;
+    position: absolute;
+    left: 0;
+    transform: rotate(-59deg);
+    margin-top: -2px;
+}
+
+.project-container.completed_1 > .hexagon, .project-container.completed_1 > .hexagon:before, .project-container.completed_1 > .hexagon:after,
+.project-container.completed_2 > .hexagon, .project-container.completed_2 > .hexagon:before, .project-container.completed_2 > .hexagon:after,
+.project-container.completed_3 > .hexagon, .project-container.completed_3 > .hexagon:before, .project-container.completed_3 > .hexagon:after {
+    border-right: 2px solid #608802;
+    border-left: 2px solid #608802;  
+    color:  #608802;
+}
+
+
+.project-container.in-progress_1 > .hexagon, .project-container.in-progress_1 > .hexagon:before, .project-container.in-progress_1 > .hexagon:after {
+    border-right: 2px solid #0351b6;
+    border-left: 2px solid #0351b6;  
+    color: #0351b6;    
+}
+
+.project-container.planned_1 > .hexagon, .project-container.planned_1 > .hexagon:before, .project-container.planned_1 > .hexagon:after {
+    border-right: 2px solid #550077;
+    border-left: 2px solid #550077;
+    color: #8a02c0;      
+}
+
+/* .demo-icon-link {
+    
+    background-color: rgba(255, 255, 255, 0.6); 
+    border-radius: 50%;
+    height: 30px;
+    width: 30px; 
+} */
+
+.demo-icon-link, .code-icon-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.demo-icon-link {
+    top: -30%;
+}
+
+.code-icon-link {
+    top: 105%;
+    z-index: 2500;
+}
+
+.demo-icon, .code-icon {
+    font-size: 70%;
+    font-weight: bold;
+    border-radius: 50%; 
+    padding: 5px;
+    z-index: 2000;
+}
+
+.project-container.completed_1 > .hexagon > .demo-icon-link > .demo-icon,
+.project-container.completed_1 > .hexagon > .code-icon-link > .code-icon,  
+.project-container.completed_2 > .hexagon > .demo-icon-link > .demo-icon, 
+.project-container.completed_2 > .hexagon > .code-icon-link > .code-icon,
+.project-container.completed_3 > .hexagon > .demo-icon-link > .demo-icon,
+.project-container.completed_3 > .hexagon > .code-icon-link > .code-icon {
+    border: 1px solid rgba(96, 136, 2, 025);
+    background-color:rgba(96, 136, 2, 0.5);
+    color:  #121212;
+}
+
+.project-title {
+    font-size: 110%;
+    font-family: 'Righteous', cursive;
+    position: absolute;
+    top: 0;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 50%;
+    font-variant: small-caps;
+}
+
+.project-container.in-progress_1 > .hexagon > .project-title {
+    top: 25%;   
+}
+
+
+/* ----------------------------------------------------------------
+    EFFECTS
+---------------------------------------------------------------- */
+
+.project-container.completed_1 > .hexagon.details, .project-container.completed_1 > .hexagon.details:before, .project-container.completed_1 > .hexagon.details:after,
+.project-container.completed_2 > .hexagon.details, .project-container.completed_2 > .hexagon.details:before, .project-container.completed_2 > .hexagon.details:after,
+.project-container.completed_3 > .hexagon.details, .project-container.completed_3 > .hexagon.details:before, .project-container.completed_3 > .hexagon.details:after {
+    background-color: rgba(96, 136, 2); 
+    font-size: 75%; 
+    transition: background-color 0.3s ease-out;
+    transform: scale(1.75) translate(2%, 35%);
+    transition: transform 0.3s ease-out;
+    
+}
+
+.project-container.completed_1 > .hexagon.details:before,
+.project-container.completed_2 > .hexagon.details:before,
+.project-container.completed_3 > .hexagon.details:before {
+    transform: rotate(59deg);
+}
+
+.project-container.completed_1 > .hexagon.details:after,
+.project-container.completed_2 > .hexagon.details:after,
+.project-container.completed_3 > .hexagon.details:after {
+    transform: rotate(-59deg);
+}
+
+.project-container.completed_1 > .hexagon.fade, .project-container.completed_1 > .hexagon.fade:before, .project-container.completed_1 > .hexagon.fade:after,
+.project-container.completed_2 > .hexagon.fade, .project-container.completed_2 > .hexagon.fade:before, .project-container.completed_2 > .hexagon.fade:after,
+.project-container.completed_3 > .hexagon.fade, .project-container.completed_3 > .hexagon.fade:before, .project-container.completed_3 > .hexagon.fade:after,
+.project-container.completed_1 > .hexagon.fade:before,
+.project-container.completed_2 > .hexagon.fade:before,
+.project-container.completed_3 > .hexagon.fade:before,
+.project-container.completed_1 > .hexagon.fade:after,
+.project-container.completed_2 > .hexagon.fade:after,
+.project-container.completed_3 > .hexagon.fade:after {
+    opacity: 0;
+    transition: opacity 0.2s linear;
+}
+
+
+
+
+.project-container.in-progress_1 > .hexagon.details, .project-container.in-progress_1 > .hexagon.details:before, .project-container.in-progress_1 > .hexagon.details:after {
+    background-color: #0351b6;   
+    transition: background-color 0.3s ease-out; 
+}
+
+.project-container.planned_1 > .hexagon.details, .project-container.planned_1 > .hexagon.details:before, .project-container.planned_1 > .hexagon.details:after {
+    background-color: #550077;  
+    transition: background-color 0.3s ease-out;    
+}
+
+
+
+
+/* ----------------------------------------------------------------
+    MEDIA QUERIES
+---------------------------------------------------------------- */
+
+@media (max-width: 320px) {
+    .project-container                                                      { transform: translate(-60%, -15%); }
+    .hexagon                                                                { transform: scale(0.825); }   
+    .project-container.completed_2, .project-container.planned_1            { margin-left: 67.5px; }
+    .project-container.completed_1, .project-container.in-progress_1        { margin-left: -67.5px; }
+    .project-container.completed_1, .project-container.completed_2          { margin-top: -115px; }
+    .project-container.in-progress_1, .project-container.planned_1          { margin-top: 115px; }
+}
+
+@media (min-width: 768px) {
+    .project-container                                                      { transform: translate(-45%, -90%); }
+    .hexagon                                                                { transform: scale(1.3); }   
+    .project-container.completed_1                                          { margin-left: -215px; margin-top: 0; }
+    .project-container.completed_2                                          { margin-left: 215px; margin-top: 0; }
+    .project-container.in-progress_1                                        { margin-left: -107.5px; margin-top: 180px; }
+    .project-container.planned_1                                            { margin-left: 107.5px; margin-top: 180px; }
+    .project-container.completed_1, .project-container.completed_2, .project-container.completed_3, .project-container.in-progress_1, .project-container.planned_1 {
+        top: 35%;
+        left: 42.5%;
+        transform: translate(-50%, -50%);
+    }
+
+    .demo-icon, .code-icon {
+        font-size: 75%;
+        font-weight: bold;
+        border-radius: 50%; 
+        padding: 5px;
+    }
+}

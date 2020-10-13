@@ -1,0 +1,205 @@
+:root {
+    --main-bg-color: #121212;
+}
+
+.hero {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--main-bg-color);
+    overflow: hidden;
+}
+
+.job-title {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'Megrim', cursive;
+    font-size: 2.75em;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    margin-left: -45vw;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9), 2px 2px 1px rgba(255, 255, 255, 0.9), 3px 3px 1px rgba(71, 4, 255, 0.9), 4px 4px 1px rgba(71, 4, 255, 0.9);
+    width: 90vw;
+}
+
+#start, #end {
+    display: block;
+    width: 80%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#start          { margin-left: -20px; }
+#end            { margin-left: 20px; }
+
+.carrousel-container {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Righteous', cursive;
+    font-size: 1.75em;
+    font-variant: small-caps;
+    position: absolute;
+    top: 57.5%;
+    width: 80vw;
+    left: 10vw;
+    height: 30vh;
+    text-align: center;
+}
+
+.carrousel-sentence {
+    margin: 0; 
+}
+
+#passion, #dabbles {
+    position: absolute; 
+    padding: 0;
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+}
+
+#back-end {
+    opacity: 0;
+}
+
+.carrousel-word {
+    display: block;
+    position: absolute;
+    top: 1.5em;
+    opacity: 0;
+    text-align: center;
+    width: 100%; 
+    font-size: 1.1em;
+}
+
+
+/* ------------------------------------------------------------------------------------------ 
+    ANIMATIONS
+------------------------------------------------------------------------------------------ */
+
+#passion { 
+    opacity: 1;
+    animation: fadeSentence1OutAndIn 16000ms ease-out infinite forwards; 
+    -webkit-animation: fadeSentence1OutAndIn 16000ms ease-out infinite forwards; 
+}
+
+#writing { 
+    animation: fadeSentence1WordsInAndOut 16000ms ease-out infinite forwards; 
+    -webkit-animation: fadeSentence1WordsInAndOut 16000ms ease-out infinite forwards; 
+}
+
+#teaching { 
+    animation: fadeSentence1WordsInAndOut 16000ms ease-out 2750ms infinite forwards; 
+    -webkit-animation: fadeSentence1WordsInAndOut 16000ms ease-out 2750ms infinite forwards; 
+}
+
+#effects { 
+    animation: fadeSentence1WordsInAndOut 16000ms ease-out 5500ms infinite forwards; 
+    -webkit-animation: fadeSentence1WordsInAndOut 16000ms ease-out 5500ms infinite forwards; 
+}
+
+#minimalism { 
+    animation: fadeSentence1WordsInAndOut 16000ms ease-out 8250ms infinite forwards; 
+    -webkit-animation: fadeSentence1WordsInAndOut 16000ms ease-out 8250ms infinite forwards; 
+}
+
+#dabbles { 
+    animation: fadeSentence2InAndOut 16000ms ease-out infinite forwards; 
+    -webkit-animation: fadeSentence2InAndOut 16000ms ease-out infinite forwards; 
+}
+
+#back-end {
+    animation: fadeSentence2WordsInAndOut 16000ms ease-out infinite forwards; 
+    -webkit-animation: fadeSentence2WordsInAndOut 16000ms ease-out infinite forwards; 
+}
+
+@keyframes fadeSentence1OutAndIn {
+    68%     { opacity: 1; }   
+    71%     { opacity: 0; } 
+    98%     { opacity: 0; }
+    100%    { opacity: 1; }
+}
+
+@-webkit-keyframes fadeSentence1OutAndIn {
+    68%     { opacity: 1; }   
+    71%     { opacity: 0; } 
+    98%     { opacity: 0; }
+    100%    { opacity: 1; }
+}
+
+@keyframes fadeSentence1WordsInAndOut {
+    2%      { opacity: 0; }   
+    7%      { opacity: 1; } 
+    13.5%   { opacity: 1; }
+    15.5%   { opacity: 0; }
+}
+
+@-webkit-keyframes fadeSentence1WordsInAndOut {
+    2%      { opacity: 0; }   
+    7%      { opacity: 1; } 
+    13.5%   { opacity: 1; }
+    15.5%   { opacity: 0; }
+}
+
+@keyframes fadeSentence2InAndOut {
+    73%     { opacity: 0; }   
+    76%     { opacity: 1; } 
+    90%     { opacity: 1; }
+    93%     { opacity: 0; }
+}
+
+@-webkit-keyframes fadeSentence2InAndOut {
+    73%     { opacity: 0; }   
+    76%     { opacity: 1; } 
+    90%     { opacity: 1; }
+    93%     { opacity: 0; }
+}
+
+@keyframes fadeSentence2WordsInAndOut {
+    76%     { opacity: 0; }   
+    81%     { opacity: 1; } 
+    85.5%    { opacity: 1; }
+    87.5%     { opacity: 0; }
+}
+
+@-webkit-keyframes fadeSentence2WordsInAndOut {
+    76%     { opacity: 0; }   
+    81%     { opacity: 1; } 
+    85.5%   { opacity: 1; }
+    87.5%   { opacity: 0; }
+}
+
+/* ------------------------------------------------------------------------------------------ 
+    MEDIA QUERIES
+------------------------------------------------------------------------------------------ */
+
+@media (max-width: 320px) {
+    .job-title                          { font-size: 2.25em; }
+    #start                              { margin-left: -7.5px; }
+    #end                                { margin-left: 7.5px; } 
+    .carrousel-container                { font-size: 1.4em; top: 60%;  }
+    .carrousel-word                     { font-size: 1.1em; }
+}
+
+@media (min-width: 768px) {
+    .job-title                          { top: 15%; }
+    #start, #end                        { font-size: 2.25em; }
+    .carrousel-container                { font-size: 3em; top: 62.5%; }
+}
+
+@media (min-width: 1000px) {
+    #start, #end                        { font-size: 2.75em; }  
+    #start                              { margin-left: -50px; }
+    #end                                { margin-right: -50px; } 
+    .carrousel-container                { font-size: 4em; }
+    .carrousel-word                     { font-size: 1.2em; top: 1.25em; }
+}
+
+@media (min-width: 768px) and (max-height: 577px) {
+    .job-title                          { top: 13%;  }
+    #start, #end                        { width: 50%; font-size: 1.5em; width: 80%; }
+    .carrousel-container                { font-size: 2.2em; top: 62.5%;  }
+    .carrousel-word                     { font-size: 1.2em; top: 1.25em; }
+}

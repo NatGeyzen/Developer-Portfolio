@@ -1,28 +1,15 @@
-:root {
-    --teal: #018b79;
-    --red: #963203;
-    --lighter-red: rgba(199, 0, 57, 0.7); 
-    --light-blue: #0351b6;
-    --light-purple: #608802;
-    --new-color: #0599be; 
-    --locked:  #806894; 
-    --other: rgb(187, 167, 167);
-}
 
 .skill-container {
-    width: 150px;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 65px;
+    height: 65px;
     position: absolute;
-    transform: translate(-50%, 40%);
+    top: 50%; left: 50%; transform: translate(-50%, 10%);
     z-index: 5;
 }
 
 .skill {
-    height: 75px;
-    width: 75px;
+    height: 67.5px;
+    width: 67.5px;
     background-color: #121212;
     border-radius: 50%;
     display: flex;
@@ -30,7 +17,6 @@
     align-items: center;
     font-family: 'Righteous', cursive;
     font-variant: small-caps;
-    font-size: 110%;
     padding: 3px;
     box-sizing: border-box;
     z-index: 5;
@@ -44,111 +30,346 @@
 .terminal.skill             { border: 3px solid var(--locked); color: var(--locked); font-size: 90%; }
 .version-control.skill      { border: 3px solid var(--new-color); color: var(--new-color); }
 .framework.skill            { border: 3px solid rgb(85, 0, 119); color: rgb(138, 2, 192); }
-.database.skill             { border: 3px solid #ac016d; color: #d30f8b}
+.databases.skill             { border: 3px solid #ac016d; color: #d30f8b}
 .other.skill                { border: 3px solid var(--other); color: var(--other); }
+.locked.skill               { border: 3px solid rgba(150, 50, 3, 0.6); color: rgba(150, 50, 3, 0.6); }
 
 .level-container {  
     background-color: #121212; 
     color: #DAA520; 
     border: 2px solid #DAA520;
     font-weight: bold;
-    font-size: 90%;
-    height: 21px;
-    width: 21px;
+    font-size: 80%;
+    height: 19px;
+    width: 19px;
     border-radius: 50%;
-    position: relative;
-    left: -10%;
-    top: 12.5%;
+    position: absolute;
+    left: 50px;
+    top: 45px; 
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 10;
-}
-
-#html-container                     { top: 10%; left: 40%; z-index: 99;}
-#css-container                      { top: 22.5%; left: 35%; }
-#js-container                       { top: 22.5%; left: 45%; }
-#node-container                     { top: 22.5%; left: 55%; }
-#jquery-container                   { top: 35%; left: 40%; }
-#react-container                    { top: 35%; left: 50%; }
-#firebase-container                 { top: 47.5%; left: 45%; font-size: 90%; }
-#linux-terminal-container               { top: 50%; transform: translateY(-50%); left: 27.5%; }
-#powershell-container                   { top: 50%; transform: translateY(-50%); left: 67.5%; }
-#git-container                          { top: 17.5%; left: 65%; }
-#github-container                       { top: 45%; left: 65%; }
-
-#chrome-dev-tools-container             { top: 17.5%; left: 40%; font-size: 75%; }
-#chrome-dev-tools-container > .skill    { padding: 10px; }
-#testing-container                      { top: 50%; transform: translateY(-50%); left: 2.5%; font-size: 80%; }
-#debugging-container                    { top: 50%; transform: translateY(-50%); left: 42.5%; font-size: 80%; }
-#ux-container                           { top: 45%; left: 40%; font-size: 90%; }
-
-#express-container                      { top: 22.5%; left: 65%; font-size: 95%; }
-#mongodb-container                      { top: 35%; left: 60%; font-size: 80%; }
-#mustache-container                     { top: 10%; left: 60%; font-size: 90%; }
-
-.terminal-skills, .other-skills {
-    width: 425px;
-    height: 100vh;
-    position: absolute;
-    bottom: 0;  
-}
-
-.terminal-skills        { left: 0; }
-.other-skills           { right: 0; }
-
-.level-bar-container { 
-    position: absolute; 
-    top: 0; 
-    right: 0;
-    width: 25vw; 
-    height: 20vh; 
-    display: flex;
-    align-items: center;
-}
-
-.level {
-    height: 35px;
-    width: 300px;
-    /* padding: 10px;  */
-    border-radius: 30px;
-    margin-top: 3.75em;
-    margin-left: 0.5em;
-    background-color: #121212; 
-    color: rgb(155, 205, 255, 0.9);
-    border: 3px solid rgb(155, 205, 255, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: 'Righteous', cursive;
-    font-size: 80%; 
-    /* z-index: 1; */
-    /* box-sizing: border-box; */
 }
 
-.progress-bar {
-    border: 3px solid rgb(155, 205, 255, 0.8); 
-    background-color: rgba(48, 39, 39, 0.9);
-    width: 90vw;
-    height: 25px;
-    border-radius: 30px;
-    margin-top: 3em;
-    margin-left: 1.5em; 
+.level-container.locked { 
+    color: rgba(218, 165, 32, 0.4); 
+    border: 2px solid rgba(218, 165, 32, 0.4);
 }
 
-.progress {
-    width: 77%;
+#js-container                       { margin-left: -40px; margin-top: -75px; }
+#css-container                      { margin-left: -120px; margin-top: -75px; }
+#html-container                     { margin-left: -80px; margin-top: -150px; }
+#jquery-container                   { margin-left: -80px; }
+#nodejs-container                   { margin-left: 40px; margin-top: -75px; }
+#express-container                  { margin-left: 120px; margin-top: -75px; }
+#mustache-container                 { margin-left: 80px; margin-top: -150px; }
+#mustache-container > .skill        { font-size: 85%; }
+#mongodb-container                  { margin-left: 80px; }
+#mongodb-container > .skill         { font-size: 80%; }
+#firebase-container                 { margin-left: 40px; margin-top: 75px; }
+#firebase-container > .skill        { font-size: 90%; }
+#react-native-container             { margin-left: -40px; margin-top: 75px;  }
+#react-native-container > .skill    { font-size: 90%; }
+
+
+/* .terminal-skills, .main-skills, .other-skills {
     height: 100%;
-    background-color: rgb(155, 205, 255, 0.3); 
-    border-radius: 30px;
+} */
+
+/* .terminal-skills > .skill-container, .other-skills > .skill-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+.terminal-skills.hidden {
+    transform: translateX(-100%);
 }
 
-.boost { 
-    width: 90vw;
-    color: rgb(155, 205, 255, 0.9);
-    position: relative; 
-    top: 52.5px; 
-    left: -200px; 
-    font-size: 80%; 
-    font-family: 'Righteous', cursive; 
+.other-skills.hidden {
+    transform: translateX(100%);    
+}
+
+#git-container,
+#chrome-dev-tools-container         { margin-top: -65px; }
+
+#github-container,
+#ux-container                       { margin-top: 65px; }
+
+#linux-command-line-container,
+#testing-container                  { margin-left: -60px; }
+
+#linux-command-line-container > .skill,
+#debugging-container > .skill       { font-size: 80%;  }
+
+#power-shell-container,
+#debugging-container                { margin-left: 60px; }
+
+#power-shell-container > .skill     { font-size: 90%; }
+#chrome-dev-tools-container > .skill       { font-size: 77.5%; padding: 5px; }
+
+.terminal-skills, .main-skills, .other-skills {
+    height: 100%;
+    width: 100%; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* -----------------------------------------------------------------------------------------
+   ANIMATIONS
+   ----------------------------------------------------------------------------------------- */
+
+.outToRight { 
+    animation: slideOutToRight 0.45s ease-out forwards; 
+    -webkit-animation: slideOutToRight 0.45s ease-out forwards; 
+    
+}
+.outToLeft { 
+    animation: slideOutToLeft 0.45s ease-out forwards; 
+    -webkit-animation: slideOutToLeft 0.45s ease-out forwards; 
+}
+.inToRight { 
+    animation: slideInToRight 0.45s ease-out forwards; 
+    -webkit-animation: slideInToRight 0.45s ease-out forwards; 
+    transform: translateY(-100%);
+}
+.inToLeft { 
+    animation: slideInToLeft 0.45s ease-out forwards; 
+    -webkit-animation: slideInToLeft 0.45s ease-out forwards;
+    transform: translateY(-100%);
+}
+
+@keyframes slideOutToRight {
+    0%      { transform: translateX(0); }
+    100%    { transform: translateX(100%); }
+}
+
+@-webkit-keyframes slideOutToRight {
+    0%      { transform: translateX(0); }
+    100%    { transform: translateX(100%); }
+}
+
+@keyframes slideOutToLeft {
+    0%      { transform: translateX(0); }
+    100%    { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes slideOutToLeft {
+    0%      { transform: translateX(0); }
+    100%    { transform: translateX(-100%); }
+}
+
+@keyframes slideInToRight {
+    0%      { transform: translateX(-100%); }
+    100%    { transform: translateX(0); }
+}
+
+@-webkit-keyframes slideInToRight {
+    0%      { transform: translateX(-100%); }
+    100%    { transform: translateX(0); }
+}
+
+@keyframes slideInToLeft {
+    0%      { transform: translateX(100%); }
+    100%    { transform: translateX(0); }
+}
+
+@-webkit-keyframes slideInToLeft {
+    0%      { transform: translateX(100%); }
+    100%    { transform: translateX(0); }
+}
+
+
+/* -----------------------------------------------------------------------------------------
+   MEDIA QUERIES
+   ----------------------------------------------------------------------------------------- */
+
+@media (min-width: 400px) {
+    
+}
+
+@media (min-width: 768px) {
+    
+}
+
+@media (min-width: 1000px) {
+    
+}
+
+@media (min-width: 768px) {
+    .skill-container                    { width: 75px;  height: 75px; }
+    .skill                              { height: 75px; width: 75px; }
+
+    #js-container,
+    #react-native-container             { margin-left: -50px; }
+
+    #html-container,
+    #jquery-container                   { margin-left: -100px; }
+
+    #css-container                      { margin-left: -160px; }
+
+    #nodejs-container,
+    #firebase-container                 { margin-left: 50px; }
+
+    #mustache-container,
+    #mongodb-container                  { margin-left: 100px; }
+
+    #express-container                  { margin-left: 150px; }
+
+    #linux-command-line-container,
+    #testing-container                  { margin-left: -70px; }
+
+    #power-shell-container,
+    #debugging-container                { margin-left: 70px; }
+
+    .level-container {  
+        font-size: 90%;
+        height: 22.5px;
+        width: 22.5px;
+        border-radius: 50%;
+        position: absolute;
+        left: 50px;
+        top: 47.5px; 
+    }
+
+    .terminal-skills.hidden {
+        transform: translate(0, -100%);
+        position: absolute;
+        top: 70vh;
+        left: 10vw;
+        width: 25%;
+        height: 25%; 
+    }
+    .terminal-skills.hidden > .legend {
+        position: absolute;
+        top: 20vh;
+        border: 1px solid blue;
+        width: 25vw;
+        
+    }
+    .main-skills.visible > .skill-container {
+        top: 42.5%; left: 50%; transform: translate(-50%, 10%);
+    }
+    .main-skills > .legend {
+        width: 50vw;
+        position: absolute;
+        left: 25%;
+        bottom: 5vh; 
+    }
+    .other-skills.hidden {
+        transform: translate(-100%, -100%);
+        position: absolute;
+        top: 70vh;
+        left: 90vw;
+        width: 25%;
+        height: 25%; 
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 1000px) {
+    .skill-container, .skill                    { width: 125px;  height: 125px; font-size: 130%; }
+
+    
+
+    #html-container,
+    #jquery-container                   { margin-left: -200px; }
+    #mustache-container,
+    #mongodb-container                  { margin-left: 200px; }
+    #html-container,
+    #mustache-container                 { margin-top: -225px; }
+    #nodejs-container,
+    #firebase-container                 { margin-left: 100px; }
+    #js-container,
+    #react-native-container             { margin-left: -100px; }
+    #js-container,
+    #nodejs-container,
+    #express-container,
+    #css-container                      { margin-top: -112.5px; }
+    #css-container                      { margin-left: -300px; }
+    #express-container                  { margin-left: 300px; }
+    #react-native-container, 
+    #firebase-container                 { margin-top: 112.5px; }
+
+    #mustache-container > .skill        { font-size: 120%; }
+    #mongodb-container > .skill         { font-size: 110%; }
+    #firebase-container > .skill        { font-size: 120%; }
+    /* #react-native-container > .skill    { font-size: 90%; } */
+    #linux-command-line-container > .skill,
+    #debugging-container > .skill  { font-size: 115%;  }
+    #chrome-dev-tools-container > .skill   {font-size: 110%; padding: 15px; box-sizing: border-box; }
+    #power-shell-container > .skill     { font-size: 90%; }
+
+
+    .terminal-skills.hidden,.other-skills.hidden {
+        top: 72.5vh;
+    }
+
+    #github-container, 
+    #ux-container                       { margin-top: 170px; }
+
+    #linux-command-line-container,
+    #power-shell-container,
+    #testing-container, 
+    #debugging-container                { margin-top: 50px; }
+    
+    #linux-command-line-container,
+    #testing-container                  { margin-left: -100px; }
+
+    #power-shell-container,
+    #debugging-container                { margin-left: 100px; }
+
+    .level-container {  
+        font-size: 110%;
+        height: 35px;
+        width: 35px;
+        left: 95px;
+        top: 77.5px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        font-family: 'Righteous', cursive;
+    }
+
+    .main-skills.visible > .skill-container {
+        top: 40%;
+    }
+
+    
+
+
+}
+
+@media (min-width: 768px) and (max-height: 577px) {
+    .skill-container, .skill                   { width: 70px;  height: 70px; font-size: 95%; }
+    .level-container {  
+        font-size: 70%;
+        height: 17.5px;
+        width: 17.5px;
+        border-radius: 50%;
+        position: absolute;
+        left: 50px;
+        top: 50px; 
+    }
+
+    #linux-command-line-container,
+    #testing-container                  { margin-left: -60px; }
+
+    #power-shell-container,
+    #debugging-container                { margin-left: 60px; }
+
+    .terminal-skills.hidden,.other-skills.hidden {
+        top: 62.5vh;
+    }
+    .terminal-skills.hidden {
+        left: 7.5vw;
+    }
+
+    .other-skills.hidden {
+        left: 92.5vw; 
+    }
 }

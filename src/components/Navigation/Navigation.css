@@ -1,0 +1,106 @@
+/* -----------------------------------------------------------------------------------------
+   GENERAL STYLING
+   ----------------------------------------------------------------------------------------- */
+ul {
+    padding: 0; 
+}
+
+.navigation, .nav-slider.open, .close-nav-button, .open-nav-button {
+    position: absolute;
+}
+
+.navigation, .nav-slider.open, .navigation-links {
+    box-sizing: border-box;
+}
+
+.navigation {
+    z-index: 1999;
+    padding-top: 2.5vh;
+    padding-left: 2vw;
+}
+
+.open-nav-button.hidden, .close-nav-button.hidden, .link.hidden { 
+    display: none; 
+}
+
+.open-nav-button.visible, .close-nav-button.visible, .link.visible { 
+    display: block; 
+}
+
+/* -----------------------------------------------------------------------------------------
+   NAV SLIDER
+   ----------------------------------------------------------------------------------------- */
+
+.nav-slider.closed {
+    width: 0;
+    transition: width 0.4s ease-out;
+}
+
+.nav-slider.open {
+    background-color: #121212;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+
+/* -----------------------------------------------------------------------------------------
+   BUTTONS
+   ----------------------------------------------------------------------------------------- */
+
+.open-nav-button, .close-nav-button         { border: none; background-color: transparent; outline: none; }
+.open-nav-button                            { top: 1.5em; left: 1.5em; }
+.close-nav-button                           { top: 3vh; right: 3vh; cursor: pointer; }
+.menu-icon                                  { color: white; font-size: 22px; }
+
+/* -----------------------------------------------------------------------------------------
+   LINKS
+   ----------------------------------------------------------------------------------------- */
+
+.navigation-links {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.link {
+    padding: 3vh;
+    cursor: pointer;
+    list-style-type: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Righteous', cursive;
+    font-variant: small-caps;
+    font-size: 2em;
+}
+
+/* -----------------------------------------------------------------------------------------
+   MEDIA QUERIES
+   ----------------------------------------------------------------------------------------- */
+
+@media (min-width: 400px) {
+    .menu-icon              { font-size: 27px; }
+}
+
+@media (min-width: 768px) {
+    .menu-icon                  { font-size: 35px; }
+    .navigation-links           { top: 0; transform: translateY(0); }
+    .link.visible               { display: inline-block; padding: 0.4em 1em 0; font-size: 1.5em; }
+    .open-nav-button.hidden     { display: block; z-index: 999; }
+    .close-nav-button.visible   { display: none; }
+    .nav-slider.open            { height: 5em; width: 90vw; left: 10vw; background-color: transparent; }
+}
+
+@media (min-width: 1000px) {
+    .open-nav-button             { top: 1.75em; left: 1.75em; }
+    .menu-icon                  { font-size: 50px; }
+    .nav-slider.open            { width: 85vw; left: 15vw; text-align: left; }
+    .link.visible               { padding: 0.7em 1.4em 0; font-size: 1.75em; }
+}
+
+@media (min-width: 768px) and (max-height: 577px) {
+    .menu-icon                  { font-size: 25px; }
+    .nav-slider.open            { left: 10vw; text-align: right; } 
+    .link.visible               { padding: 0.15em 1.4em 0; font-size: 1.5em; }
+}

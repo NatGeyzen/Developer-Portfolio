@@ -1,3 +1,56 @@
+:root {
+    --teal: #018b79;
+    --red: #963203;
+    --lighter-red: rgba(199, 0, 57, 0.7); 
+    --light-blue: #0351b6;
+    --light-purple: #608802;
+    --new-color: #0599be; 
+    --locked:  #806894; 
+    --other: rgb(187, 167, 167);
+}
+
 .App {
     text-align: center;
+}
+
+.page-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    background-color: #121212;
+    overflow: hidden;
+}
+
+.page-section-title {
+    font-family: 'Righteous', cursive;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 250%;
+    position: absolute;
+    left: 7.5vw;
+    top: 10vh; 
+    letter-spacing: 2px;
+    font-variant: small-caps;
+    margin: 0; 
+}
+
+@media (min-width: 768px) and (min-height: 1000px) {
+    .page-section-title {
+        font-size: 300%;     
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 1000px) {
+    .page-section-title {
+        font-size: 400%;     
+    }
+}
+
+@media (min-width: 768px) and (max-height: 577px) {
+    .page-section-title {
+        font-size: 275%;     
+    }
 }

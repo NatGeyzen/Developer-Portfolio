@@ -1,0 +1,79 @@
+.posts-wrapper {
+    display: flex;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.lessons-learned, .step-by-step {
+    background-color: #121211;
+    color: rgba(255, 255, 255, 0.8);
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.lessons-learned.initial, .step-by-step.initial {
+    width: 100vw;
+    max-width: 100vw;
+    display: block;
+    box-sizing: border-box;
+}
+.lessons-learned.hidden, .step-by-step.hidden {
+    display: none;
+}
+
+.post-category {
+    font-variant: small-caps;
+    font-weight: bold;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    margin: 50px auto 0.25em;
+    border-bottom: 1px solid var(--teal);
+    padding-bottom: 5px;
+    width: 60%;
+    font-size: 90%; 
+}
+
+.post-title {
+    padding: 0.5em 2.5em 0; 
+    font-weight: bold;
+    font-variant: small-caps;
+    font-family: 'Righteous', cursive;
+    font-size: 125%;
+    line-height: 27.5px;
+    margin: 0;
+}
+
+.arrow.right, .arrow.left {
+    z-index: 999;
+}
+
+
+@media (min-width: 768px) {
+    .posts-wrapper {
+        overflow-x: hidden;
+    }
+    .step-by-step, .step-by-step.initial, .lessons-learned, .lessons-learned.initial {
+        padding-top: 10vh;
+        width: 100vw;
+    }
+    .post-category {
+        font-size: 100%;
+        box-sizing: border-box;
+    }
+    .post-title {
+        font-size: 175%;
+        line-height: 50px;
+    }
+    .arrow.left, .arrow.right {
+        display: block;
+        top: 40%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .post-category {
+        font-size: 175%;
+    }
+    .post-title {
+        font-size: 250%;
+    }
+}

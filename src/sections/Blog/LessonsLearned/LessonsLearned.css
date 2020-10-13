@@ -1,0 +1,83 @@
+
+
+.post-category.lessons-learned {
+    border-bottom: 1px solid var(--light-blue);
+    padding-bottom: 5px;
+    width: 60%;
+}
+
+.post-intro {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    width: 70%;
+    margin: 5em auto 3em; 
+    text-align: left;
+    line-height: 150%;
+    font-size: 85%; 
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.post-subtitle {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 110%;
+    width: 65%;
+    margin: auto;
+    margin-bottom: 2em;
+}
+
+.post-text {
+    width: 70%;
+    margin: auto;
+    padding: 1em;
+    text-align: left;
+    font-size: 85%; 
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 150%;
+}
+
+.tier3-title {
+    text-align: left;
+    width: 70%;
+    margin: 2em auto 1em;
+    font-size: 90%;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.article-footer {
+    padding: 2em 2em 0.75em;
+    font-size: 70%;
+    font-style: italic;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.footer-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    width: 40%;
+    margin: auto;
+    padding-top: 7.5px;
+}
+
+@media (min-width: 768px) {
+    .post-intro, .post-text {
+        font-size: 125%;
+        line-height: 150%;
+    }
+    .tier3-title {
+        font-size: 130%; 
+    }
+}
+
+
+@media (min-width: 1000px) {
+    .post-intro, .post-text {
+        font-size: 110%;
+        line-height: 175%;
+        /* width: 75%; */
+    }
+    .post-subtitle {
+        font-size: 175%;
+    }
+    .tier3-title {
+        font-size: 160%; 
+    }
+}

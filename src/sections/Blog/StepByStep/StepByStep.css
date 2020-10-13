@@ -1,0 +1,163 @@
+.requirements, .steps, .part2 {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.post-img {
+    width: 70%;
+    height: auto;
+    margin: 3em 0 1em;
+    /* border: 2px solid rgba(255, 255, 255, 0.7); */
+    box-shadow: 
+        1px 1px 2px rgba(255, 255, 255, 0.7), 
+        -1px -1px 2px rgba(255, 255, 255, 0.7), 
+        2px 2px 2px rgba(255, 255, 255, 0.7), 
+        -2px -2px 2px rgba(255, 255, 255, 0.7),
+        3px 3px 2px rgba(255, 255, 255, 0.7), 
+        -3px -3px 2px rgba(255, 255, 255, 0.7);
+}
+
+.requirements {
+    /* padding: 0 2em;  */
+    font-size: 90%;
+    font-weight: bold;
+    font-style: italic;
+    width: 80%; 
+    margin: auto; 
+}
+
+.divider-line {
+    height: 1px;
+    width: 150px;
+    background-color: var(--teal);
+    margin: 1em auto 0;
+}
+
+.flex-screenshots-steps {
+    padding-top: 2em;
+    padding-bottom: 40px;
+}
+.screenshots-wrapper, .steps {
+    position: absolute;
+    width: 100%;
+    margin: auto;
+}
+
+.screenshots-wrapper > img {
+    position: relative;
+}
+
+.steps {
+    width: 80%;
+    margin: 4em auto 0;
+    text-align: left;
+    font-size: 90%;
+    /* line-height: 125px;  */
+    position: relative;
+    top: 0;
+}
+
+.step.one                                           { margin-top: 175px; }
+.step.two, .step.four, .step.five, .step.six, .step.eight, .step.nine      { margin-top: 25px; }
+.step.three                                         { margin-top: 190px; }
+.step.seven                                          { margin-top: 175px; }
+.step.ten                                       { margin-top: 210px; }
+
+/* .screenshots-wrapper {
+    width: 40%;
+    padding: 0;
+    margin-left: 10vw;
+    margin-top: 10vh; 
+} */
+.post-img-small{
+    width: 90%;
+    height: auto;
+    margin: 1em 0;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.post-img-small.two             { margin-top: 125px; }
+.post-img-small.three           { margin-top: 225px; }
+.post-img-small.four            { margin-top: 300px; }
+
+
+.part2 {
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 110%;
+}
+
+@media (min-width: 400px) {
+    .step.two, .step.four, .step.five, .step.six, .step.eight, .step.nine      { margin-top: 25px; }
+    .step.one, .step.three, .step.seven                       { margin-top: 200px; }  
+    .step.seven                     { margin-top: 190px; }
+    .step.ten                       { margin-top: 225px; }
+    .post-img-small.two             { margin-top: 125px; }
+    .post-img-small.three           { margin-top: 225px; }
+    .post-img-small.four            { margin-top: 275px; }
+}
+
+@media (max-width: 320px) {
+    .step.two, .step.four, .step.five, .step.six, .step.eight, .step.nine      { margin-top: 25px; }
+    .step.one, .step.seven                       { margin-top: 165px; }  
+    .step.three                     { margin-top: 175px; }
+    .step.seven                     { margin-top: 175px; }
+    .step.ten                       { margin-top: 175px; }
+    .post-img-small.two             { margin-top: 130px; }
+    .post-img-small.three           { margin-top: 250px; }
+    .post-img-small.four            { margin-top: 325px; }    
+}
+
+@media (min-width: 768px) {
+    .post-img {
+        width: 50%;
+    }
+    .post-img-small.one, .post-img-small.two, .post-img-small.three, .post-img-small.four  {
+        width: 60%;
+        margin: 2em auto;
+    }
+    .flex-screenshots-steps {
+        display: flex;
+        overflow-x: hidden;
+        border: 1px solid green;
+    }
+    .screenshots-wrapper, .steps {
+        width: 50%;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .screenshots-wrapper {
+        position: ;
+        margin-bottom: 3em;
+    }
+    .steps {
+        margin-left: 50%;
+    }
+
+    .step.one, .step.two, .step.three, .step.four, .step.five, .step.six, .step.seven, .step.eight, .step.nine, .step.ten {
+        margin: 2em; 
+    }
+
+    .step.one           { margin-top: 50px; }
+}
+
+@media (min-width: 1000px) {
+    .post-img-small.one, .post-img-small.two, .post-img-small.three, .post-img-small.four  {
+        width: 80%;
+        margin: 2em auto;
+    }
+    .flex-screenshots-steps {
+        padding: 5em 0;
+        width: 100%;
+        /* justify-content: center; */
+    }
+    .screenshots-wrapper {
+        width: 50%;
+    }
+    .steps {
+        font-size: 115%;
+        width: 50%; 
+        line-height: 125%;
+    }
+}
+
